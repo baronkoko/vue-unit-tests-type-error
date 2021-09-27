@@ -2,11 +2,12 @@ import { shallowMount } from "@vue/test-utils";
 import HelloWorld from "@/components/HelloWorld.vue";
 
 describe("HelloWorld.vue", () => {
-  it("renders props.msg when passed", () => {
-    const msg = "new message";
+  it("should render full name", () => {
+    const firstName = "Tailor";
+    const lastName = "Cox";
     const wrapper = shallowMount(HelloWorld, {
-      props: { msg },
+      props: { firstName, lastName },
     });
-    expect(wrapper.text()).toMatch(msg);
+    expect(wrapper.text()).toMatch(`${firstName} ${lastName}`);
   });
 });
