@@ -8,6 +8,8 @@ describe("HelloWorld.vue", () => {
     const wrapper = shallowMount(HelloWorld, {
       props: { firstName, lastName },
     });
-    expect(wrapper.text()).toMatch(`${firstName} ${lastName}`);
+    expect(wrapper.text()).toMatch(
+      `${firstName.toUpperCase()} ${lastName.toUpperCase()}`
+    );
   });
 });

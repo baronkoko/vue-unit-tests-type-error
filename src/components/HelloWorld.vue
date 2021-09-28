@@ -25,7 +25,7 @@ export default defineComponent({
     fullName() {
       const util = new FakeUtil();
 
-      return util.getFullName(this.firstName, this.lastName);
+      return util.getFullNameCapitalized(this.firstName, this.lastName);
     },
   },
 });
